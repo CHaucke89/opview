@@ -63,3 +63,8 @@ jobs:
       - run: flutter pub get
 
       - run: flutter build ios --release --no-codesign
+      
+      - uses: actions/upload-artifact@v7
+        with:
+          name: opview-ios
+          path: build/app/outputs/flutter-ios/opview-ios.app
